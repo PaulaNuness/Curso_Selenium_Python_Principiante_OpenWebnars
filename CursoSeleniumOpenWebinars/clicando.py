@@ -47,12 +47,39 @@ try:
     # Buscar(navegar) en  la pagina de wikipedia
     driver.get("https://www.wikipedia.es")
 
-    # Escribimos en el ternimal el titulo de la pagina web
+    # Escribimos en el terminal el titulo de la pagina web
     print(driver.title)
 
-    
+    # Busca  link que tenha el id
+    element = driver.find_element(By.ID, "vector-main-menu-dropdown")
 
+    # Espera 2 segundos antes de fechar o navegador
+    time.sleep(2)
+
+    # clicar no elemento
+    element.click()
+    print("Elemento 1 hamburguer clicado com sucesso")
+
+    # Espera 2 segundos 
+    time.sleep(2)
+
+    # Encontra o link "Página aleatoria" 
+    pagina_aleatoria = driver.find_element(By.XPATH, '//a[@href="/wiki/Especial:Aleatoria"]')
+    print("Elemento encontrado:", pagina_aleatoria)
+
+    # Clicar en el enlace pagina_aleatoria
+    pagina_aleatoria.click()
+    print("Elemento 2 enlace página aleatoria clicado com sucesso")
+
+
+except Exception as e:
+    print("Elemento não encontrado")
+    print("Erro:", e)
+    
 finally:
+
+    # Espera 10 segundos antes de fechar o navegador
+    time.sleep(5)
     #cierra el navegador y la session del driver
     driver.quit()
 

@@ -47,27 +47,24 @@ try:
     # Buscar(navegar) en  la pagina de wikipedia
     driver.get("https://www.wikipedia.es")
 
-    # Escribimos en el ternimal el titulo de la pagina web
+    # Escribimos en el terminal el titulo de la pagina web
     print(driver.title)
 
-    # encuentra el elemento por el id,por ejemplo estou buscando el link pagina aleatoria
-    element = driver.find_element(By.ID, "n-randompage")
+    # Busca parte do texto do link que tenha o texto Portada
+    element = driver.find_element(By.PARTIAL_LINK_TEXT, "Portada")
+    print("Elemento encontrado:", element)
 
-    # Encontra o link "Página aleatoria" pelo texto do link
-    pagina_aleatoria = driver.find_element(By.XPATH, '//a[@href="/wiki/Especial:Aleatoria"]')
+    # Busca parte do texto do link que tenha o texto Portada
+    elemento = driver.find_element(By.PARTIAL_LINK_TEXT, "Portada").text
+    print("Elemento encontrado:", elemento)
 
-    # DECLARAMOS EL IDENTIFICADOR A TRAVÉS DE LA TUPLA (BY,"LOCALIZADOR")
-    ayuda= (By.LINK_TEXT, "Ayuda")
+    # Busca texto do link que tenha o texto Portada
+    portada = driver.find_element(By.LINK_TEXT, "Portada").text
+    print("Elemento encontrado:", portada)
 
-    # Buscar un radio botton que tenga ID
-    radioButtonPequeno = driver.find_element(By.ID, "skin-client-pref-vector-feature-custom-font-size-value-0")
-
-    # Podria tambien buscar un radio botton por el value
-    radioButtonEstandar = driver.find_element(By.CSS_SELECTOR, "input[type='radio'][value='1']")
-
+except:
+    print("Elemento não encontrado")
     
-
-
 finally:
     #cierra el navegador y la session del driver
     driver.quit()
