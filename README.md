@@ -37,6 +37,5 @@
   * Hacer el import webdriver: from selenium import webdriver
   * Despues instanciar el webdriver:  driver = webdriver.Chrome("C:/Users/paula/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe")
   * Cuando no encuentra la ruta, podemos ponerla dentro de la variable de entorno en path( he probado he funciona muy bien)
-  * 
 
 **************************************************************************************************************************************
