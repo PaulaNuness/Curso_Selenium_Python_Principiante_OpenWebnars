@@ -1,5 +1,6 @@
 # Curso_Selenium_Python_Principiante_OpenWebnars
 * Curso hecho en la plataforma OpenWebnars
+* [API Selenium](https://selenium-python.readthedocs.io/api.html)
 ## Introducción
 * Selenium es un framework destinado a la automatización de navegación web.
 * Podemos encontrar tres versiones disponibles:
