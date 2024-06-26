@@ -44,6 +44,9 @@ try:
     # Inicializar el navegador sin especificar la ruta del chromedriver, porque ya tenemos la ruta en variables de entorno
     driver = webdriver.Chrome()
 
+    # Maximiza a janela do navegador
+    driver.maximize_window()
+
     # Buscar(navegar) en  la pagina de wikipedia
     driver.get("https://www.wikipedia.es")
 
@@ -53,14 +56,19 @@ try:
     # encuentra el elemento por el id,por ejemplo estou buscando el link pagina aleatoria
     element = driver.find_element(By.ID, "n-randompage")
 
+    time.sleep(2)
+
     # Encontra o link "Página aleatoria" pelo texto do link
     pagina_aleatoria = driver.find_element(By.XPATH, '//a[@href="/wiki/Especial:Aleatoria"]')
+
+    time.sleep(2)
 
     # DECLARAMOS EL IDENTIFICADOR A TRAVÉS DE LA TUPLA (BY,"LOCALIZADOR")
     ayuda= (By.LINK_TEXT, "Ayuda")
 
     # Buscar un radio botton que tenga ID
     radioButtonPequeno = driver.find_element(By.ID, "skin-client-pref-vector-feature-custom-font-size-value-0")
+
 
     # Podria tambien buscar un radio botton por el value
     radioButtonEstandar = driver.find_element(By.CSS_SELECTOR, "input[type='radio'][value='1']")

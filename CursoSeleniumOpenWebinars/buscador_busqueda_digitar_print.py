@@ -53,13 +53,25 @@ try:
     # Encontra o campo de busca pelo nome
     search_box = driver.find_element(By.NAME, "q")
 
+    # Encontre o elemento "Aceptar todo" por l+el ID
+    boton_aceptar = driver.find_element(By.ID, "L2AGLb")
+
+    # clicar no elemento
+    boton_aceptar.click()
+
+    #Una foto de la pantalla con el buscador Goole
+    driver.save_screenshot('Buscador_google.png')
+
     # Digita "Selenium" e pressiona Enter
     search_box.send_keys("Selenium")
     search_box.send_keys(Keys.RETURN)
 
+     #Una foto de la pantalla Selenium
+    driver.save_screenshot('Selenium.png')
+
     # Espera um momento para ver os resultados
     driver.implicitly_wait(5)
-    time.sleep(10)
+    time.sleep(5)
 
     
 

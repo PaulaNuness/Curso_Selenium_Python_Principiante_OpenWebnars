@@ -54,10 +54,16 @@ try:
     element = driver.find_element(By.PARTIAL_LINK_TEXT, "Portada")
     print("Elemento encontrado:", element)
 
+    # Espera 2 segundos antes de fechar o navegador
+    time.sleep(2)
+
     # Busca parte do texto do link que tenha o texto Portada
     elemento = driver.find_element(By.PARTIAL_LINK_TEXT, "Portada").text
     print("Elemento encontrado:", elemento)
 
+    # Espera 2 segundos antes de fechar o navegador
+    time.sleep(2)
+    
     # Busca texto do link que tenha o texto Portada
     portada = driver.find_element(By.LINK_TEXT, "Portada").text
     print("Elemento encontrado:", portada)

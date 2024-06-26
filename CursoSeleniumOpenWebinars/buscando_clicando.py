@@ -50,7 +50,7 @@ try:
     # Escribimos en el terminal el titulo de la pagina web
     print(driver.title)
 
-    # Busca  link que tenha el id
+    # Busca  link que tenha el id, elemento hamburguer superior a la izquierda
     element = driver.find_element(By.ID, "vector-main-menu-dropdown")
 
     # Espera 2 segundos antes de fechar o navegador
@@ -63,7 +63,7 @@ try:
     # Espera 2 segundos 
     time.sleep(2)
 
-    # Encontra o link "Página aleatoria" 
+    # Encontra o link "Página aleatoria", que esta dentro del hamburguer
     pagina_aleatoria = driver.find_element(By.XPATH, '//a[@href="/wiki/Especial:Aleatoria"]')
     print("Elemento encontrado:", pagina_aleatoria)
 
