@@ -11,7 +11,7 @@ try:
     drive.maximize_window()
 
     # vamos a pruebar la pagina donde hay combobox
-    drive.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select")  
+    drive.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select_multiple")  
 
     # quiero que espere 5 segundos
     time.sleep(5) 
@@ -28,6 +28,7 @@ try:
 
     # Seleciona a opção "Audi"
     select_element.select_by_value("audi")
+    select_element.select_by_value("opel")
 
     #Encuentra el elemento que es un input e que tenha o valor = Submit y clica nele
     drive.find_element(By.XPATH, '//input[@value="Submit"]').click()
@@ -40,4 +41,3 @@ finally:
 
     # cerrar todo
     drive.quit() 
-
