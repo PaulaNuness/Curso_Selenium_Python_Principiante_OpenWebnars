@@ -20,7 +20,7 @@ try:
     elemento = drive.find_element(By.ID,"accept-choices")
     elemento.click()
 
-    # Muda para o frame correto onde está o combobox
+    # Muda para o frame correto onde está o combobox, muda el sitio
     drive.switch_to.frame("iframeResult")
 
     #buscamos el elemento por el nombre
