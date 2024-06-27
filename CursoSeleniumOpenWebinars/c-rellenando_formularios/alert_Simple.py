@@ -35,7 +35,8 @@ try:
     time.sleep(3) 
 
     # Muda para o alert onde está o botao aceptar, 
-    drive.switch_to.alert.accept()
+    alert = drive.switch_to.alert
+    alert.accept()
 
 finally:
     # quiero que espere 3 segundos
