@@ -4,8 +4,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 try:
-    # Inicializa o driver do Chrome
-    driver = webdriver.Chrome()
+    # Inicializa o driver do Firefox
+    driver = webdriver.Firefox()
 
     # Maximiza a janela do navegador
     driver.maximize_window()
